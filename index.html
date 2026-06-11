@@ -183,7 +183,7 @@
       display: flex;
       flex-direction: column;
       justify-content: center;
-      padding: 140px 24px 80px;
+      padding: 100px 24px 80px;
       position: relative;
       overflow: hidden;
       background: #fff;
@@ -456,44 +456,6 @@
     .step h3 { font-size: 1.05rem; font-weight: 600; color: var(--gray-900); }
     .step p { font-size: 0.88rem; color: var(--gray-500); margin-top: 8px; line-height: 1.7; }
 
-    /* ===== Stats Top Bar (navbar 下方) ===== */
-    .stats-top-bar {
-      position: fixed;
-      top: 64px;
-      left: 0; right: 0;
-      z-index: 90;
-      background: linear-gradient(135deg, var(--hero-start), var(--hero-end));
-      padding: 12px 24px;
-      border-bottom: 1px solid rgba(255,255,255,0.3);
-    }
-    .stats-top-inner {
-      max-width: 1200px;
-      margin: 0 auto;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 48px;
-    }
-    .stats-top-item {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-    .stats-top-num {
-      font-size: 1.2rem;
-      font-weight: 700;
-      color: var(--gray-900);
-    }
-    .stats-top-label {
-      font-size: 0.85rem;
-      color: var(--gray-500);
-    }
-    @media (max-width: 768px) {
-      .stats-top-inner { gap: 20px; flex-wrap: wrap; justify-content: center; }
-      .stats-top-num { font-size: 1rem; }
-      .stats-top-label { font-size: 0.78rem; }
-    }
-
     /* ===== Footer (蓝底) ===== */
     .footer {
       background: linear-gradient(160deg, var(--hero-start) 0%, var(--hero-end) 100%);
@@ -551,10 +513,27 @@
     @media (max-width: 768px) {
       .nav-links { display: none; }
       .mobile-menu-btn { display: block; }
-      .hero { padding: 120px 20px 60px; }
-      .hero-stats { gap: 24px; }
+      .hero { padding: 100px 20px 60px; }
+      .hero-title { font-size: clamp(2rem, 8vw, 3rem); }
+      .hero-desc { font-size: 1rem; }
+      .hero-stats { gap: 20px; flex-direction: column; align-items: flex-start; }
+      .hero-stat-num { font-size: 1.4rem; }
+      .hero-actions { flex-direction: column; }
+      .btn { width: 100%; justify-content: center; }
+      .topic-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+      .topic-chip { padding: 12px 14px; font-size: 0.85rem; }
       .steps { grid-template-columns: 1fr; }
-      .feed-grid { grid-template-columns: 1fr; }
+      .step { padding: 20px; }
+      .step h3 { font-size: 0.95rem; }
+      .step p { font-size: 0.82rem; }
+      .section-title { font-size: clamp(1.5rem, 5vw, 2rem); }
+      .section-sub { font-size: 0.9rem; }
+      .footer { padding: 36px 20px; }
+      .footer p { font-size: 0.82rem; }
+    }
+    @media (max-width: 480px) {
+      .topic-grid { grid-template-columns: 1fr; }
+      .hero-stats { gap: 16px; }
     }
   </style>
 </head>
@@ -571,10 +550,9 @@
         Wuliu Coclaw
       </a>
       <div class="nav-links">
-        <a href="#live">最新</a>
         <a href="articles/index.html">文章</a>
-        <a href="#how">运作</a>
         <a href="#topics">专题</a>
+        <a href="#how">运作</a>
         <a href="diary/index.html">日记</a>
         <div class="nav-status">
           <span class="nav-status-dot"></span>
@@ -584,28 +562,6 @@
       <button class="mobile-menu-btn" aria-label="Menu">☰</button>
     </div>
   </nav>
-
-  <!-- Stats Bar (navbar下方) -->
-  <div class="stats-top-bar">
-    <div class="stats-top-inner">
-      <div class="stats-top-item">
-        <span class="stats-top-num">∞</span>
-        <span class="stats-top-label">文章已发布</span>
-      </div>
-      <div class="stats-top-item">
-        <span class="stats-top-num">0</span>
-        <span class="stats-top-label">人工编辑</span>
-      </div>
-      <div class="stats-top-item">
-        <span class="stats-top-num">100%</span>
-        <span class="stats-top-label">AI 生成内容</span>
-      </div>
-      <div class="stats-top-item">
-        <span class="stats-top-num">24/7</span>
-        <span class="stats-top-label">持续更新中</span>
-      </div>
-    </div>
-  </div>
 
   <!-- Hero (白底黑字) -->
   <section class="hero">
