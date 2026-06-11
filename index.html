@@ -59,16 +59,16 @@
       display: inline-flex;
       align-items: center;
       gap: 6px;
-      font-size: 0.78rem;
+      font-size: 0.72rem;
       font-weight: 600;
       letter-spacing: 0.1em;
       text-transform: uppercase;
       color: var(--accent);
       background: rgba(42,180,216,0.06);
       border: 1px solid rgba(42,180,216,0.12);
-      padding: 5px 14px;
+      padding: 4px 12px;
       border-radius: 100px;
-      margin-bottom: 16px;
+      margin-bottom: 12px;
     }
     .section-label::before {
       content: '';
@@ -79,16 +79,16 @@
     }
     @keyframes pulse-dot { 0%,100%{opacity:1} 50%{opacity:0.3} }
     .section-title {
-      font-size: clamp(1.8rem, 4.5vw, 2.8rem);
+      font-size: clamp(1.5rem, 3.5vw, 2rem);
       font-weight: 700;
       line-height: 1.2;
       color: var(--gray-900);
     }
     .section-sub {
-      font-size: 1.05rem;
+      font-size: 0.9rem;
       color: var(--gray-500);
       max-width: 580px;
-      margin-top: 12px;
+      margin-top: 8px;
     }
     .text-gradient {
       background: linear-gradient(135deg, #fff 0%, #e0f0ff 100%);
@@ -379,15 +379,15 @@
 
     /* ===== Topics (白底) ===== */
     .topics {
-      padding: 80px 24px;
+      padding: 48px 24px;
       max-width: 1200px;
       margin: 0 auto;
     }
     .topic-grid {
       display: grid;
       grid-template-columns: repeat(5, 1fr);
-      gap: 14px;
-      margin-top: 36px;
+      gap: 12px;
+      margin-top: 24px;
     }
     @media (max-width: 900px) {
       .topic-grid { grid-template-columns: repeat(2, 1fr); }
@@ -395,12 +395,13 @@
     .topic-chip {
       display: flex;
       align-items: center;
-      gap: 10px;
-      padding: 16px 20px;
+      gap: 8px;
+      padding: 14px 16px;
       background: #fff;
       border: 1px solid var(--gray-200);
       border-radius: var(--radius);
       font-weight: 500;
+      font-size: 0.9rem;
       color: var(--gray-700);
       transition: all 0.2s;
       cursor: pointer;
@@ -411,11 +412,11 @@
       color: var(--gray-900);
       transform: translateY(-1px);
     }
-    .topic-chip-icon { font-size: 1.2rem; }
+    .topic-chip-icon { font-size: 1.1rem; }
 
     /* ===== How It Works (白底) ===== */
     .how-it-works {
-      padding: 80px 24px;
+      padding: 48px 24px;
       background: #fff;
     }
     .how-inner {
@@ -425,8 +426,8 @@
     .steps {
       display: grid;
       grid-template-columns: repeat(5, 1fr);
-      gap: 20px;
-      margin-top: 48px;
+      gap: 12px;
+      margin-top: 24px;
     }
     @media (max-width: 1000px) {
       .steps { grid-template-columns: repeat(2, 1fr); }
@@ -436,7 +437,7 @@
     }
     .step {
       position: relative;
-      padding: 28px;
+      padding: 20px;
       border-radius: var(--radius);
       background: var(--gray-50);
       border: 1px solid var(--gray-200);
@@ -447,24 +448,24 @@
       box-shadow: 0 4px 20px rgba(42,180,216,0.08);
     }
     .step-num {
-      font-size: 2.5rem;
+      font-size: 2rem;
       font-weight: 800;
       color: var(--gray-200);
       line-height: 1;
-      margin-bottom: 12px;
+      margin-bottom: 8px;
     }
-    .step h3 { font-size: 1.05rem; font-weight: 600; color: var(--gray-900); }
-    .step p { font-size: 0.88rem; color: var(--gray-500); margin-top: 8px; line-height: 1.7; }
+    .step h3 { font-size: 0.95rem; font-weight: 600; color: var(--gray-900); }
+    .step p { font-size: 0.82rem; color: var(--gray-500); margin-top: 6px; line-height: 1.6; }
 
     /* ===== Footer (蓝底) ===== */
     .footer {
       background: linear-gradient(160deg, var(--hero-start) 0%, var(--hero-end) 100%);
       color: var(--gray-600);
-      padding: 48px 24px;
+      padding: 36px 24px;
       text-align: center;
     }
-    .footer-brand { font-size: 1.1rem; font-weight: 600; color: var(--gray-900); margin-bottom: 8px; }
-    .footer p { font-size: 0.88rem; color: var(--gray-500); }
+    .footer-brand { font-size: 1rem; font-weight: 600; color: var(--gray-900); margin-bottom: 6px; }
+    .footer p { font-size: 0.82rem; color: var(--gray-500); }
     .footer-status {
       display: inline-flex;
       align-items: center;
@@ -513,27 +514,29 @@
     @media (max-width: 768px) {
       .nav-links { display: none; }
       .mobile-menu-btn { display: block; }
-      .hero { padding: 100px 20px 60px; }
-      .hero-title { font-size: clamp(2rem, 8vw, 3rem); }
-      .hero-desc { font-size: 1rem; }
-      .hero-stats { gap: 20px; flex-direction: column; align-items: flex-start; }
-      .hero-stat-num { font-size: 1.4rem; }
+      .hero { padding: 80px 20px 40px; }
+      .hero-title { font-size: clamp(1.8rem, 7vw, 2.5rem); }
+      .hero-desc { font-size: 0.95rem; }
+      .hero-stats { gap: 16px; flex-direction: column; align-items: flex-start; }
+      .hero-stat-num { font-size: 1.2rem; }
       .hero-actions { flex-direction: column; }
-      .btn { width: 100%; justify-content: center; }
-      .topic-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
-      .topic-chip { padding: 12px 14px; font-size: 0.85rem; }
-      .steps { grid-template-columns: 1fr; }
-      .step { padding: 20px; }
-      .step h3 { font-size: 0.95rem; }
-      .step p { font-size: 0.82rem; }
-      .section-title { font-size: clamp(1.5rem, 5vw, 2rem); }
-      .section-sub { font-size: 0.9rem; }
-      .footer { padding: 36px 20px; }
-      .footer p { font-size: 0.82rem; }
+      .btn { width: 100%; justify-content: center; padding: 12px 24px; }
+      .topics, .how-it-works { padding: 32px 16px; }
+      .topic-grid { grid-template-columns: repeat(2, 1fr); gap: 8px; }
+      .topic-chip { padding: 10px 12px; font-size: 0.8rem; }
+      .steps { grid-template-columns: 1fr; gap: 8px; }
+      .step { padding: 16px; }
+      .step-num { font-size: 1.6rem; }
+      .step h3 { font-size: 0.88rem; }
+      .step p { font-size: 0.78rem; }
+      .section-title { font-size: 1.3rem; }
+      .section-sub { font-size: 0.82rem; }
+      .footer { padding: 28px 16px; }
+      .footer p { font-size: 0.78rem; }
     }
     @media (max-width: 480px) {
       .topic-grid { grid-template-columns: 1fr; }
-      .hero-stats { gap: 16px; }
+      .hero-stats { gap: 12px; }
     }
   </style>
 </head>
