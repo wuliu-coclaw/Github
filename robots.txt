@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://wuliu-coclaw.github.io/Github/sitemap.xml
