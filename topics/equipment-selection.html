@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AI + 智慧物流 — Wuliu Coclaw</title>
-  <meta name="description" content="AI+医药物流最新动态，涵盖智能仓储、自动化设备、大模型应用、冷链IoT等领域的行业资讯与深度解读。">
+  <title>物流设备选型 — Wuliu Coclaw</title>
+  <meta name="description" content="物流设备选型专题：AGV、输送线、分拣系统、货架等设备的选型指南。">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🐊</text></svg>">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -151,59 +151,6 @@
       margin-bottom: 24px;
     }
 
-    .article-list {
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
-    }
-    .article-card {
-      display: flex;
-      align-items: center;
-      gap: 20px;
-      padding: 20px;
-      background: var(--gray-50);
-      border: 1px solid var(--gray-200);
-      border-radius: var(--radius);
-      transition: all 0.3s;
-    }
-    .article-card:hover {
-      border-color: var(--accent);
-      box-shadow: 0 4px 20px rgba(42,180,216,0.1);
-      transform: translateY(-2px);
-    }
-    .article-card-content { flex: 1; }
-    .article-card-tag {
-      display: inline-block;
-      font-size: 0.7rem;
-      font-weight: 600;
-      padding: 2px 8px;
-      border-radius: 100px;
-      background: rgba(42,180,216,0.1);
-      color: var(--accent);
-      margin-bottom: 8px;
-    }
-    .article-card-title {
-      font-size: 1.05rem;
-      font-weight: 600;
-      color: var(--gray-900);
-      margin-bottom: 6px;
-    }
-    .article-card-desc {
-      font-size: 0.85rem;
-      color: var(--gray-500);
-      line-height: 1.6;
-    }
-    .article-card-meta {
-      font-size: 0.78rem;
-      color: var(--gray-400);
-      margin-top: 8px;
-    }
-    .article-card-arrow {
-      color: var(--accent);
-      font-size: 1.2rem;
-      font-weight: 600;
-    }
-
     .empty-state {
       text-align: center;
       padding: 60px 20px;
@@ -226,31 +173,6 @@
       color: var(--gray-500);
     }
 
-    .load-more {
-      display: none;
-      text-align: center;
-      margin-top: 24px;
-    }
-    .load-more-btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 12px 32px;
-      background: #fff;
-      color: var(--gray-700);
-      border: 1px solid var(--gray-200);
-      border-radius: var(--radius);
-      font-size: 0.9rem;
-      font-weight: 600;
-      cursor: pointer;
-      transition: all 0.25s;
-    }
-    .load-more-btn:hover {
-      background: var(--gray-50);
-      border-color: var(--accent);
-      color: var(--accent);
-    }
-
     .footer {
       background: linear-gradient(160deg, #d0e8ff 0%, #a8e8f4 100%);
       color: var(--gray-600);
@@ -267,8 +189,6 @@
       .hero { padding: 80px 16px 32px; }
       .hero-title { font-size: 1.8rem; }
       .content { padding: 32px 16px; }
-      .article-card { flex-direction: column; gap: 12px; padding: 16px; }
-      .article-card-arrow { display: none; }
     }
   </style>
 </head>
@@ -293,31 +213,21 @@
     <div class="hero-inner">
       <div class="hero-badge">
         <span class="hero-badge-dot"></span>
-        🤖 AI + 智慧物流专题
+        ⚙️ 物流设备选型专题
       </div>
-      <h1 class="hero-title">AI + 智慧物流</h1>
-      <p class="hero-desc">AI正在重塑物流行业的每一个环节。从智能仓储到自动驾驶，从大模型到IoT，毅哥带你洞察AI+物流的最新趋势。</p>
+      <h1 class="hero-title">物流设备选型</h1>
+      <p class="hero-desc">AGV、输送线、分拣系统、货架……设备选型决定了物流中心的效率和成本。毅哥帮你避开选型路上的坑。</p>
     </div>
   </section>
 
   <section class="content">
-    <div class="section-label">最新文章</div>
-    <h2 class="section-title">专题文章</h2>
+    <div class="section-label">专题文章</div>
+    <h2 class="section-title">最新内容</h2>
 
-    <div class="article-list" id="articleList">
-      <a href="../articles/03_ai_pharma_logistics_2026.html" class="article-card">
-        <div class="article-card-content">
-          <span class="article-card-tag">行业动态</span>
-          <div class="article-card-title">AI+医药物流：2026年6月行业动态速递</div>
-          <div class="article-card-desc">字节AI制药拆分融资、顺丰AI箱型推荐入选36氪案例、LogiPharma维也纳峰会……毅哥为你精选6条最有价值的行业资讯。</div>
-          <div class="article-card-meta">🐊 coclaw写作 · 2026-06-11</div>
-        </div>
-        <div class="article-card-arrow">→</div>
-      </a>
-    </div>
-
-    <div class="load-more" id="loadMore">
-      <button class="load-more-btn" onclick="loadMore()">查看更多文章 ↓</button>
+    <div class="empty-state">
+      <div class="empty-state-icon">🏗️</div>
+      <div class="empty-state-title">专题建设中</div>
+      <div class="empty-state-desc">毅哥正在整理25年的设备选型经验，精彩内容即将上线。<br>敬请期待！</div>
     </div>
   </section>
 
@@ -329,22 +239,5 @@
     </div>
   </footer>
 
-  <script>
-    const articles = document.querySelectorAll('.article-card');
-    if (articles.length > 3) {
-      for (let i = 3; i < articles.length; i++) {
-        articles[i].style.display = 'none';
-      }
-      document.getElementById('loadMore').style.display = 'block';
-    }
-
-    function loadMore() {
-      const articles = document.querySelectorAll('.article-card');
-      articles.forEach(article => {
-        article.style.display = 'flex';
-      });
-      document.getElementById('loadMore').style.display = 'none';
-    }
-  </script>
 </body>
 </html>

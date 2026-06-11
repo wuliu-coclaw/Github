@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AI + 智慧物流 — Wuliu Coclaw</title>
-  <meta name="description" content="AI+医药物流最新动态，涵盖智能仓储、自动化设备、大模型应用、冷链IoT等领域的行业资讯与深度解读。">
+  <title>医药商业物流 — Wuliu Coclaw</title>
+  <meta name="description" content="医药商业物流专题：冷链物流、配送网络、GSP合规等专业内容。">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🐊</text></svg>">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -226,31 +226,6 @@
       color: var(--gray-500);
     }
 
-    .load-more {
-      display: none;
-      text-align: center;
-      margin-top: 24px;
-    }
-    .load-more-btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 12px 32px;
-      background: #fff;
-      color: var(--gray-700);
-      border: 1px solid var(--gray-200);
-      border-radius: var(--radius);
-      font-size: 0.9rem;
-      font-weight: 600;
-      cursor: pointer;
-      transition: all 0.25s;
-    }
-    .load-more-btn:hover {
-      background: var(--gray-50);
-      border-color: var(--accent);
-      color: var(--accent);
-    }
-
     .footer {
       background: linear-gradient(160deg, #d0e8ff 0%, #a8e8f4 100%);
       color: var(--gray-600);
@@ -293,10 +268,10 @@
     <div class="hero-inner">
       <div class="hero-badge">
         <span class="hero-badge-dot"></span>
-        🤖 AI + 智慧物流专题
+        🚚 医药商业物流专题
       </div>
-      <h1 class="hero-title">AI + 智慧物流</h1>
-      <p class="hero-desc">AI正在重塑物流行业的每一个环节。从智能仓储到自动驾驶，从大模型到IoT，毅哥带你洞察AI+物流的最新趋势。</p>
+      <h1 class="hero-title">医药商业物流</h1>
+      <p class="hero-desc">从仓储到配送，冷链物流到最后一公里，医药商业物流连接着药厂和患者。这里汇集了毅哥对医药流通环节的深度思考。</p>
     </div>
   </section>
 
@@ -304,20 +279,16 @@
     <div class="section-label">最新文章</div>
     <h2 class="section-title">专题文章</h2>
 
-    <div class="article-list" id="articleList">
-      <a href="../articles/03_ai_pharma_logistics_2026.html" class="article-card">
+    <div class="article-list">
+      <a href="../articles/02_cold_chain_2026.html" class="article-card">
         <div class="article-card-content">
-          <span class="article-card-tag">行业动态</span>
-          <div class="article-card-title">AI+医药物流：2026年6月行业动态速递</div>
-          <div class="article-card-desc">字节AI制药拆分融资、顺丰AI箱型推荐入选36氪案例、LogiPharma维也纳峰会……毅哥为你精选6条最有价值的行业资讯。</div>
+          <span class="article-card-tag">行业分析</span>
+          <div class="article-card-title">2026冷链物流：谁在悄悄吃掉这个万亿市场？</div>
+          <div class="article-card-desc">解读最新行业数据，分析冷链物流的竞争格局和未来趋势。这5家公司正在改变游戏规则。</div>
           <div class="article-card-meta">🐊 coclaw写作 · 2026-06-11</div>
         </div>
         <div class="article-card-arrow">→</div>
       </a>
-    </div>
-
-    <div class="load-more" id="loadMore">
-      <button class="load-more-btn" onclick="loadMore()">查看更多文章 ↓</button>
     </div>
   </section>
 
@@ -329,22 +300,5 @@
     </div>
   </footer>
 
-  <script>
-    const articles = document.querySelectorAll('.article-card');
-    if (articles.length > 3) {
-      for (let i = 3; i < articles.length; i++) {
-        articles[i].style.display = 'none';
-      }
-      document.getElementById('loadMore').style.display = 'block';
-    }
-
-    function loadMore() {
-      const articles = document.querySelectorAll('.article-card');
-      articles.forEach(article => {
-        article.style.display = 'flex';
-      });
-      document.getElementById('loadMore').style.display = 'none';
-    }
-  </script>
 </body>
 </html>
