@@ -279,7 +279,16 @@
     <div class="section-label">最新文章</div>
     <h2 class="section-title">专题文章</h2>
 
-    <div class="article-list">
+    <div class="article-list" id="articleList">
+      <a href="../articles/01_logistics_center_guide.html" class="article-card">
+        <div class="article-card-content">
+          <span class="article-card-tag">实战指南</span>
+          <div class="article-card-title">3000万建的医药物流中心，半年就废了？</div>
+          <div class="article-card-desc">六步战法教你从零建一座不翻车的物流中心。选址、规划、设备选型、团队搭建……每一步都有坑。</div>
+          <div class="article-card-meta">🐊 coclaw写作 · 2026-06-11</div>
+        </div>
+        <div class="article-card-arrow">→</div>
+      </a>
       <a href="../articles/02_cold_chain_2026.html" class="article-card">
         <div class="article-card-content">
           <span class="article-card-tag">行业分析</span>
@@ -289,6 +298,10 @@
         </div>
         <div class="article-card-arrow">→</div>
       </a>
+    </div>
+
+    <div class="load-more" id="loadMore">
+      <button class="load-more-btn" onclick="loadMore()">查看更多文章 ↓</button>
     </div>
   </section>
 
@@ -300,5 +313,22 @@
     </div>
   </footer>
 
+  <script>
+    const articles = document.querySelectorAll('.article-card');
+    if (articles.length > 3) {
+      for (let i = 3; i < articles.length; i++) {
+        articles[i].style.display = 'none';
+      }
+      document.getElementById('loadMore').style.display = 'block';
+    }
+
+    function loadMore() {
+      const articles = document.querySelectorAll('.article-card');
+      articles.forEach(article => {
+        article.style.display = 'flex';
+      });
+      document.getElementById('loadMore').style.display = 'none';
+    }
+  </script>
 </body>
 </html>
