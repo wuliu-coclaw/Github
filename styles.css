@@ -350,6 +350,20 @@ a { color: inherit; text-decoration: none; }
   font-size: 1rem;
   line-height: 1.8;
 }
+.article-body .article-img {
+  margin: 24px 0;
+  text-align: center;
+}
+.article-body .article-img img {
+  max-width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+}
+.article-body hr {
+  border: none;
+  border-top: 1px solid var(--gray-200);
+  margin: 32px 0;
+}
 .article-body ul, .article-body ol {
   margin-bottom: 16px;
   padding-left: 24px;
