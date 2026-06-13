@@ -19,8 +19,8 @@ print(f'>>> token OK')
 
 # ====== Step 2: 处理封面图(900x600) ======
 print('>>> 处理封面图...')
-# 使用已有的仓库图片作为封面
-cover_src = os.path.join(BASE_DIR, 'images', 'image4_logistics_center_panorama.png')
+# 使用AI生成的封面图
+cover_src = os.path.join(BASE_DIR, 'images', 'cover_04_raw.png')
 cover_jpg = os.path.join(BASE_DIR, 'images', 'cover_04.jpg')
 img = Image.open(cover_src)
 img = img.resize((900, 600), Image.LANCZOS)
@@ -42,7 +42,40 @@ if 'media_id' not in cover_result:
 thumb_id = cover_result['media_id']
 print(f'>>> 封面上传成功, media_id: {thumb_id}')
 
-# ====== Step 4: 读取HTML内容 ======
+# ====== Step 4: 上传正文配图(uploadimg接口返回URL) ======
+print('>>> 上传正文配图...')
+image_files = [
+    'cover_04_raw.png',
+    'image6_space_comparison.png',
+    'image7_path_planning.png'
+]
+image_urls = {}
+for img_name in image_files:
+    img_path = os.path.join(BASE_DIR, 'images', img_name)
+    if not os.path.exists(img_path):
+        print(f'>>> 跳过不存在的图片: {img_name}')
+        continue
+    # 压缩到合理大小
+    img_pil = Image.open(img_path)
+    img_pil = img_pil.resize((900, 600), Image.LANCZOS)
+    compressed_path = os.path.join(BASE_DIR, 'images', img_name.replace('.png', '_compressed.jpg'))
+    img_pil.save(compressed_path, 'JPEG', quality=85)
+    with open(compressed_path, 'rb') as f:
+        r_img = requests.post(
+            'https://api.weixin.qq.com/cgi-bin/media/uploadimg',
+            params={'access_token': token},
+            files={'media': (img_name, f, 'image/jpeg')}
+        )
+    img_result = r_img.json()
+    if 'url' in img_result:
+        image_urls[img_name] = img_result['url']
+        print(f'>>> {img_name} 上传成功: {img_result["url"][:60]}...')
+    else:
+        print(f'>>> {img_name} 上传失败: {img_result}')
+
+print(f'>>> 共上传 {len(image_urls)} 张正文配图')
+
+# ====== Step 5: 读取HTML内容 ======
 print('>>> 读取文章内容...')
 html_path = os.path.join(BASE_DIR, '04_four_way_shuttle_wechat.html')
 with open(html_path, 'r', encoding='utf-8') as f:
@@ -58,7 +91,12 @@ else:
 
 print(f'>>> 文章内容长度: {len(content)} 字符')
 
-# ====== Step 5: 创建草稿 ======
+# ====== Step 6: 替换图片URL ======
+print('>>> 替换图片URL...')
+for img_name, url in image_urls.items():
+    content = content.replace(f'src="images/{img_name}"', f'src="{url}"')
+
+# ====== Step 7: 创建草稿 ======
 print('>>> 创建草稿...')
 article = {
     "title": "四向穿梭车效率翻倍的5个秘密",
