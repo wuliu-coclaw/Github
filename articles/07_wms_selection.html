@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>年销10亿选WMS，80%的企业选错了方向 - Wuliu Coclaw</title>
+<link rel="stylesheet" href="../styles.css">
+<style>
+.article-container { max-width: 760px; margin: 0 auto; padding: 100px 20px 60px; }
+.article-meta { color: #8d99ae; font-size: 14px; margin-bottom: 30px; }
+.article-meta span { margin-right: 20px; }
+h1 { font-size: 28px; color: #2b2d42; line-height: 1.4; }
+h3 { color: #2b2d42; font-size: 18px; margin: 24px 0 12px; border-left: 4px solid #ef233c; padding-left: 12px; }
+strong { color: #2b2d42; }
+blockquote { border-left: 4px solid #8d99ae; padding: 12px 20px; margin: 16px 0; background: #f8f9fa; color: #555; font-style: italic; }
+table { width: 100%; border-collapse: collapse; margin: 16px 0; font-size: 14px; }
+th { background: #2b2d42; color: #fff; padding: 10px; text-align: left; }
+td { padding: 8px 10px; border-bottom: 1px solid #eee; }
+.ending { background: #f0f7ff; border: 1px solid #d0e8ff; border-radius: 8px; padding: 16px; margin-top: 30px; font-size: 14px; color: #555; text-align: center; line-height: 2; }
+.back-link { display: inline-block; margin-bottom: 20px; color: #2ab4d8; text-decoration: none; }
+.back-link:hover { text-decoration: underline; }
+</style>
+</head>
+<body>
+<nav style="background: linear-gradient(135deg, #d0e8ff, #a8e8f4); padding: 16px 0; position: fixed; width: 100%; top: 0; z-index: 100;">
+<div style="max-width: 1200px; margin: 0 auto; padding: 0 20px; display: flex; justify-content: space-between; align-items: center;">
+<a href="../index.html" style="font-size: 20px; font-weight: bold; color: #2b2d42; text-decoration: none;">Wuliu Coclaw</a>
+<div>
+<a href="../articles/" style="color: #2b2d42; text-decoration: none; margin: 0 15px;">文章</a>
+<a href="../diary/" style="color: #2b2d42; text-decoration: none; margin: 0 15px;">日记</a>
+</div>
+</div>
+</nav>
+<div class="article-container">
+<a href="./" class="back-link">← 返回文章列表</a>
+<h1>年销10亿选WMS，80%的企业选错了方向</h1>
+<div class="article-meta">
+<span>📅 2026-06-16</span>
+<span>👤 毅哥说物流</span>
+<span>🏷️ 系统选型 / WMS</span>
+<span>⏱️ 约8分钟</span>
+</div>
+
+<p>故事是这样的。</p>
+
+<p>去年有个朋友找我，说他们公司花500万上了国际大厂的WMS，系统上线两年了，仓库里还是Excel加对讲机。</p>
+
+<p>我一点都不意外。</p>
+
+<p>做了二十多年医药物流，从写代码到管仓库，这种事我见太多了。不是系统不行，是选错了。</p>
+
+<p>医药行业用得最多的WMS，大致分三种。国际大厂的，国内头部的，行业专用的。这三种系统的底层逻辑完全不一样，选错了后面全是坑。今天我把这三种系统的真相，好好捋一捋。</p>
+
+<img src="images/cover_07.jpg" alt="医药物流仓库" style="width:100%; border-radius:8px; margin:20px 0;">
+
+<h3>先说国际大厂</h3>
+
+<p>架构成熟，全球上百家客户验证过，听着很美对吧？但定制开发成本极高。改一个流程可能要走三个月的变更流程。你要做GSP的首营管理？标准功能里没有，额外定制，80万起。适合谁？年销售50亿以上，业务复杂度高，有国际业务的企业。架构扛得住大业务量，但你得付得起定制的钱。</p>
+
+<h3>再说国内头部</h3>
+
+<p>灵活度高，国内团队响应快。听起来也不错？但定制太多系统会"变胖"，后期维护压力大。我见过一个企业定制了300多个功能点，系统升级的时候全要重新适配，光升级费就花了300万。适合谁？年销售10亿到50亿的企业。灵活度高，性价比好，但你要控制住定制的冲动。</p>
+
+<h3>最后说行业专用系统</h3>
+
+<p>专为医药设计，GSP合规、冷链追溯、首营管理开箱即用，成本低上线快。听起来最省心？但架构扩展性有限。你年销售做到20亿发现系统跑不动了，换系统？数据迁移能把人折腾疯。适合谁？年销售10亿以下的企业。成本低、上线快、合规内置，够用就好。</p>
+
+<blockquote>选型只是第一个坑。还有两个更深的，很多企业根本没意识到。</blockquote>
+
+<img src="images/image1_chaos.jpg" alt="仓库管理混乱" style="width:100%; border-radius:8px; margin:20px 0;">
+
+<h3>第一个坑：设备集成</h3>
+
+<p>WMS不是独立运行的，它要和仓库里的各种设备对话。电子标签、输送线、自动立体库、RFID、PDA、温湿度监控，这些设备的通讯协议各不相同。很多企业选型的时候只看软件功能演示，不考虑设备集成。结果系统买回来了，发现和仓库里的设备对不上，又要花一大笔钱做接口开发。我有个客户，光接口开发就花了200万。</p>
+
+<h3>第二个坑：ERP和TMS的接口</h3>
+
+<p>WMS要和ERP做数据同步，订单、库存、商品主数据实时来回传。WMS还要和TMS协同，出库排车、配送路线、回单确认。这两个接口做不好，WMS就是一个信息孤岛。</p>
+
+<blockquote>一个企业WMS和ERP都上了，但两个系统的数据对不上。库存WMS显示有货，ERP显示没货。财务结算的时候两边数据差了2000万。最后请了八个顾问花了三个月才把数据对上。</blockquote>
+
+<img src="images/image2_selection.jpg" alt="WMS选型决策" style="width:100%; border-radius:8px; margin:20px 0;">
+
+<h3>到底应该怎么选？四步走</h3>
+
+<p><strong>第一步，先搞清楚自己要什么。</strong>很多企业的选型顺序是反的，先听厂商讲PPT，觉得功能都有挺好。签了合同实施的时候才发现，PPT上有的功能要定制，定制要加钱，加的钱比软件费还多。正确的顺序是先列需求清单。</p>
+
+<table>
+<tr><th>需求维度</th><th>必须明确的问题</th></tr>
+<tr><td>业务规模</td><td>日均出库行数、SKU数量、批号数量</td></tr>
+<tr><td>业务类型</td><td>纯仓储还是仓配一体？整件为主还是拆零为主？</td></tr>
+<tr><td>合规要求</td><td>GSP认证要求哪些功能？冷链追溯需求？</td></tr>
+<tr><td>设备对接</td><td>仓库里有哪些自动化设备？</td></tr>
+<tr><td>系统对接</td><td>现有ERP是什么？TMS有没有？</td></tr>
+<tr><td>预算</td><td>软件预算多少？实施预算多少？每年维护预算多少？</td></tr>
+</table>
+
+<p><strong>第二步，必须做POC。</strong>让厂商用你的真实数据、真实流程跑一遍，跑通了再签合同。不做POC就签合同，跟闭着眼睛买车差不多。</p>
+
+<p><strong>第三步，签合同之前问清楚三件事。</strong>标准功能包含哪些？定制开发怎么收费？升级时定制部分怎么处理？这三个问题不问清楚，后面全是扯皮。</p>
+
+<p><strong>第四步，算清楚隐性成本。</strong></p>
+
+<table>
+<tr><th>成本项</th><th>容易忽略的点</th></tr>
+<tr><td>接口开发费</td><td>ERP/TMS/设备接口可能单独收费</td></tr>
+<tr><td>数据迁移费</td><td>旧系统数据导入新系统的费用</td></tr>
+<tr><td>培训费</td><td>分批次、分角色培训可能按天收费</td></tr>
+<tr><td>年度维护费</td><td>通常是软件费用的15%-20%</td></tr>
+<tr><td>升级费</td><td>大版本升级可能另收费</td></tr>
+</table>
+
+<h3>一个真实的踩坑案例</h3>
+
+<p>某企业年销售20亿，选了国际大厂的WMS。厂商承诺标准功能覆盖90%需求。结果实施过程中发现，GSP的首营管理模块需要定制，额外花了80万。与现有ERP的接口对接花了3个月，原计划1个月。冷链追溯功能不满足国内法规要求，需要二次开发。最终项目超预算40%，延期6个月上线。</p>
+
+<p><strong>选型时看到的和实施时拿到的，可能是两个完全不同的系统。</strong></p>
+
+<h3>总结：按规模选型建议</h3>
+
+<table>
+<tr><th>企业规模</th><th>推荐类型</th><th>核心理由</th><th>关键注意点</th></tr>
+<tr><td>年销售10亿以下</td><td>行业专用系统</td><td>成本低、上线快、合规内置</td><td>关注架构扩展性，预留升级空间</td></tr>
+<tr><td>年销售10-50亿</td><td>国内头部系统</td><td>灵活度高、性价比好</td><td>控制定制数量，避免系统"变胖"</td></tr>
+<tr><td>年销售50亿以上</td><td>国际大厂系统</td><td>架构成熟、扛得住大业务量</td><td>算清楚定制成本，做好长期投入准备</td></tr>
+</table>
+
+<p>不管选哪个，三件事必须做：POC必须跑、接口必须测、隐性成本必须算清楚。</p>
+
+<p>说到底，系统是为人服务的，不是人为系统服务的。选WMS之前，先搞清楚自己要什么，再去看系统。这个顺序不能反。</p>
+
+<div class="ending">
+<p><strong>毅哥说物流 | 20多年医药物流全链路实战专家</strong></p>
+<p>聚焦于医药生产工艺优化、医药企业信息化咨询及绿色能源改造升级</p>
+<p>致力于用AI与数字技术驱动医药企业精益增长</p>
+<p>更多干货，关注：<a href="https://wuliu-coclaw.github.io/Github/">https://wuliu-coclaw.github.io/Github/</a></p>
+</div>
+
+</div>
+</body>
+</html>
