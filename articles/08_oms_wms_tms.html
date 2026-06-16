@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>OMS、WMS、TMS，搞物流的你真的分得清吗？ - Wuliu Coclaw</title>
+<link rel="stylesheet" href="../styles.css">
+<style>
+.article-container { max-width: 760px; margin: 0 auto; padding: 100px 20px 60px; }
+.article-meta { color: #8d99ae; font-size: 14px; margin-bottom: 30px; }
+.article-meta span { margin-right: 20px; }
+h1 { font-size: 28px; color: #2b2d42; line-height: 1.4; }
+h3 { color: #2b2d42; font-size: 18px; margin: 24px 0 12px; border-left: 4px solid #ef233c; padding-left: 12px; }
+strong { color: #2b2d42; }
+blockquote { border-left: 4px solid #8d99ae; padding: 12px 20px; margin: 16px 0; background: #f8f9fa; color: #555; font-style: italic; }
+table { width: 100%; border-collapse: collapse; margin: 16px 0; font-size: 14px; }
+th { background: #2b2d42; color: #fff; padding: 10px; text-align: left; }
+td { padding: 8px 10px; border-bottom: 1px solid #eee; }
+.ending { background: #f0f7ff; border: 1px solid #d0e8ff; border-radius: 8px; padding: 16px; margin-top: 30px; font-size: 14px; color: #555; text-align: center; line-height: 2; }
+.back-link { display: inline-block; margin-bottom: 20px; color: #2ab4d8; text-decoration: none; }
+.back-link:hover { text-decoration: underline; }
+</style>
+</head>
+<body>
+<nav style="background: linear-gradient(135deg, #d0e8ff, #a8e8f4); padding: 16px 0; position: fixed; width: 100%; top: 0; z-index: 100;">
+<div style="max-width: 1200px; margin: 0 auto; padding: 0 20px; display: flex; justify-content: space-between; align-items: center;">
+<a href="../index.html" style="font-size: 20px; font-weight: bold; color: #2b2d42; text-decoration: none;">Wuliu Coclaw</a>
+<div>
+<a href="../articles/" style="color: #2b2d42; text-decoration: none; margin: 0 15px;">文章</a>
+<a href="../diary/" style="color: #2b2d42; text-decoration: none; margin: 0 15px;">日记</a>
+</div>
+</div>
+</nav>
+<div class="article-container">
+<a href="./" class="back-link">← 返回文章列表</a>
+<h1>OMS、WMS、TMS，搞物流的你真的分得清吗？</h1>
+<div class="article-meta">
+<span>📅 2026-06-16</span>
+<span>👤 毅哥说物流</span>
+<span>🏷️ 系统选型</span>
+<span>⏱️ 约8分钟</span>
+</div>
+
+<p>很多做物流的朋友，经常把OMS、WMS、TMS搞混。有人说WMS管仓库、TMS管运输、OMS管订单，听起来没错，但太浅了。</p>
+
+<p>今天我把这三个系统的关系，掰开了揉碎了讲清楚。搞懂了这三个系统，你就搞懂了整个物流信息化的底层架构。</p>
+
+<img src="images/cover_08.jpg" alt="医药物流中心全景" style="width:100%; border-radius:8px; margin:20px 0;">
+
+<p>先说一个很多人不知道的事实。这三个系统不是孤立存在的，它们是一个链条。订单进来，OMS先接住，拆单、合并、分配。然后WMS接手，拣货、打包、出库。最后TMS接管，排车、配送、签收。任何一个环节断了，整个链条就废了。</p>
+
+<blockquote>我见过一个企业，三个系统都有，但数据对不上。OMS显示订单已发货，WMS显示货物还在库区，TMS显示车辆已出发。三方数据各说各话，客户投诉电话打爆了。</blockquote>
+
+<h3>OMS：大脑，负责决策</h3>
+
+<p>OMS是订单管理系统，是整个物流链条的起点。客户下单那一刻，OMS就开始工作了。它要做的事情包括接收订单、校验库存、拆单合并、分配仓库、推送到WMS。</p>
+
+<p>比如拆单。一个客户下了10个SKU，其中5个在A仓，3个在B仓，2个缺货。OMS要把这个订单拆成三个子订单，分别推给A仓和B仓，缺货的2个要走采购流程。拆错了，后面全是麻烦。</p>
+
+<h3>WMS：双手，负责执行</h3>
+
+<p>WMS是仓储管理系统，是整个物流链条的核心。它管的是仓库里发生的一切。入库、上架、拣选、复核、出库、盘点、补货，每一步都要精确到库位、精确到批次、精确到效期。</p>
+
+<img src="images/image1_warehouse.jpg" alt="仓库作业" style="width:100%; border-radius:8px; margin:20px 0;">
+
+<p>医药行业的WMS比普通WMS复杂得多。因为它要管GSP合规、冷链追溯、首营管理、批号管理。一个批号管错了，整批药品可能报废。</p>
+
+<h3>TMS：双脚，负责送达</h3>
+
+<p>TMS是运输管理系统，是整个物流链条的末端。它管的是从仓库到客户手中的这段路。排车、装车、配送路线规划、在途监控、签收回单、运费结算，每一步都要精确到分钟、精确到公里、精确到每一分钱。</p>
+
+<img src="images/image2_delivery.jpg" alt="配送装车" style="width:100%; border-radius:8px; margin:20px 0;">
+
+<p>TMS能省多少钱？一个年配送费用500万的企业，上了TMS之后，路线优化减少行驶里程15%到25%，配载优化提高车辆装载率20%到30%，调度效率提升减少调度人员50%。算下来，一年能省100万到150万。两年就能回本。</p>
+
+<h3>三者缺一不可</h3>
+
+<table>
+<tr><th>系统</th><th>角色</th><th>核心职责</th><th>断了会怎样</th></tr>
+<tr><td>OMS</td><td>大脑</td><td>订单接收、拆单合单、分配仓库</td><td>订单进来就乱了</td></tr>
+<tr><td>WMS</td><td>双手</td><td>入库、拣选、复核、出库</td><td>仓库里找不着货</td></tr>
+<tr><td>TMS</td><td>双脚</td><td>排车、配送、签收、结算</td><td>货出了仓库就断了线</td></tr>
+</table>
+
+<p>我见过很多企业，花了大价钱上WMS，但OMS和TMS没跟上。结果WMS再好用，也发挥不出价值。因为上游的订单数据不准，下游的配送信息不通。</p>
+
+<p>所以我的建议是，三个系统要一起规划、一起建设。先搞清楚业务流程，再选系统。先打通接口，再上功能。不要想着一步到位。先上OMS和WMS，把订单和仓储打通。再上TMS，把配送打通。分步走，每一步都踩实了，再走下一步。</p>
+
+<blockquote>某企业三个系统同时上，结果项目组分成三拨人，各干各的。最后三个系统上线了，但接口对不上，数据流不通。又花了三个月才把数据对上。三个系统同时上没问题，但必须有一个总负责人，懂三个系统的业务逻辑，能协调三个团队。</blockquote>
+
+<p>最后说句实在的。OMS、WMS、TMS，不是三个独立的软件，是一条完整的供应链。上游的OMS决定了下游的WMS和TMS能做什么，下游的TMS反馈的数据又影响上游OMS的决策。这是一个闭环，不是三个开环。</p>
+
+<div class="ending">
+<p>我是毅哥，做了二十多年医药物流信息化，从写代码到做架构设计，从基层管理做到企业高管。现聚焦于医药生产工艺优化、医药企业信息化咨询及绿色能源改造升级，致力于用AI与数字技术驱动医药企业精益增长更多物流实战经验，关注公众号「毅哥说物流」或访问 <a href="https://wuliu-coclaw.github.io/Github/">https://wuliu-coclaw.github.io/Github/</a></p>
+</div>
+
+</div>
+</body>
+</html>
